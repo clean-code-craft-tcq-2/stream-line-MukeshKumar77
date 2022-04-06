@@ -8,18 +8,18 @@ void printToConsole(int batteryData[])
 	int i;
 	for (i = 0; i < NUMBERS_OF_READINGS; i++)
 	{
-		printf("%d\n", batteryData[i]);
+	   printf("%d\n", batteryData[i]);
 	}
 }
 
 
 bool readDataFromFile(FILE* filePtr, int sensorData[])
 {
-	if (NULL == filePtr)
-	{
-		printf("file cannot be opened \n");
-		return false;
-	}
+    if (NULL == filePtr)
+    {
+	printf("file cannot be opened \n");
+	return false;
+    }
 
     int i;
     for (i = 0; fscanf(filePtr, "%d", &sensorData[i]) != EOF; i++)
@@ -27,10 +27,9 @@ bool readDataFromFile(FILE* filePtr, int sensorData[])
     	//do nothing
     }
 
-	fclose(filePtr);
+    fclose(filePtr);
     printToConsole(sensorData);
-
-	return true;
+    return true;
 }
 
 
