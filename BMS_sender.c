@@ -1,7 +1,16 @@
 #include "BMS_Sender.h"
 
-
-int main()
+void printToConsole(char batteryData[])
 {
-  return 0;
+}
+
+void readDataFromFile(float* Temperature, float* SOC)
+{
+}
+
+void sendDataToConsole(float* Temperature, float* SOC)
+{
+}
+void BMS_DataSender(void)
+{
 }
