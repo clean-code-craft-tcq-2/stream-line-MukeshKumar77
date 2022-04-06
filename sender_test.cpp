@@ -3,7 +3,8 @@
 #include "test/catch.hpp"
 #include "BMS_sender.h"
 
-TESTCASE ("BMS_DataSender")
+
+TEST_CASE("BMS_DataSender")
 {
   BMS_DataSender();
 }
