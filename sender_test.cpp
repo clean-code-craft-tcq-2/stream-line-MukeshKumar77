@@ -20,5 +20,5 @@ TEST_CASE("File is correct")
 TEST_CASE("File is corrupted")
 {
     fptr = fopen("stateofcharge_sensor.txt","r");
-    REQUIRE(readDataFromFile(filePtr, sensorData) == false);
+    REQUIRE(readDataFromFile(fptr, sensorData) == false);
 }
