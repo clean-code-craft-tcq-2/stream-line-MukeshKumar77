@@ -1,4 +1,4 @@
-#include "BMS_Sender.h"
+#include "BMS_sender.h"
 
 void printToConsole(char batteryData[])
 {
