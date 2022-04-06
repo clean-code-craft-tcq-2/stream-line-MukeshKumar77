@@ -3,8 +3,22 @@
 #include "test/catch.hpp"
 #include "BMS_sender.h"
 
+FILE* fptr;
+int sensorData[NUMBERS_OF_READINGS];
 
-TEST_CASE("BMS_DataSender")
+TEST_CASE("Sending data to console")
 {
-  BMS_DataSender();
+    REQUIRE(BMS_DataSender() == true);
+}
+
+TEST_CASE("File is correct")
+{
+    fptr = fopen("temparatue_sensor.txt","r");
+    REQUIRE(readDataFromFile(fptr, sensorData) == true);
+}
+
+TEST_CASE("File is corrupted")
+{
+    fptr = fopen("stateofcharge_sensor.txt","r");
+    REQUIRE(readDataFromFile(filePtr, sensorData) == false);
 }
